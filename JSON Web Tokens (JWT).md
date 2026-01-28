@@ -59,8 +59,12 @@ In modern pentesting, none algorithm is not that prevalent in well-developed app
 # PoC: JWT authentication bypass via flawed signature verification (Portswigger)
 
 ### Step 1:
-Open the lab in the Burp browser:([](https://portswigger.net/web-security/jwt/lab-jwt-authentication-bypass-via-flawed-signature-verification)).
-To keep the PoC to the point, I'm providing the link to set JWT Editor Extension:[](https://youtu.be/9xhdK6HHLjk?si=qxvlRVxphpOJsrar).
+Open the lab in the Burp browser:
+https://portswigger.net/web-security/jwt/lab-jwt-authentication-bypass-via-flawed-signature-verification
+
+To keep the PoC to the point, I'm providing the link to set JWT Editor Extension:
+https://youtu.be/9xhdK6HHLjk?si=MZxrnThuuxvZwhlx
+
 ### Step 2:
 Click on `My account` and login with creds provided: wiener:peter 
 <p align="center">
@@ -99,6 +103,7 @@ In the response, you will see we have accessed the admin panel.
 <img width="60%" src="./Pasted image 20260128200810.png">
 </p>
 Change the path to `/admin/delete?username=carlos` and you will see we have successfully deleted user Carlos.
+
 ### How to Secure it (Developer's Perspective):
 - Never let user-input decide the behavior security mechanisms.
 - Treat whole JWT as untrusted, therefore validating all entries.
