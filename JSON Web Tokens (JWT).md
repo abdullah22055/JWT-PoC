@@ -59,29 +59,34 @@ In modern pentesting, none algorithm is not that prevalent in well-developed app
 # PoC: JWT authentication bypass via flawed signature verification (Portswigger)
 
 ### Step 1:
-Open the [lab]([Lab: JWT authentication bypass via flawed signature verification | Web Security Academy](https://portswigger.net/web-security/jwt/lab-jwt-authentication-bypass-via-flawed-signature-verification)) in the Burp browser. To keep the PoC to the point click [here](https://youtu.be/9xhdK6HHLjk?si=qxvlRVxphpOJsrar) to set JWT Editor Extension.
+Open the lab in the Burp browser:([](https://portswigger.net/web-security/jwt/lab-jwt-authentication-bypass-via-flawed-signature-verification)).
+To keep the PoC to the point, I'm providing the link to set JWT Editor Extension:[](https://youtu.be/9xhdK6HHLjk?si=qxvlRVxphpOJsrar).
 ### Step 2:
 Click on `My account` and login with creds provided: wiener:peter 
 <p align="center">
 <img width="60%" src="./Pasted image 20260128185051.png">
 </p>
+
 ### Step 3:
 Note that when you login, requests in http history containing JWT will be highlighted as below:
 <p align="center">
 <img width="60%" src="./Pasted image 20260128185409.png">
 </p>
  Send the `GET /my-account?id=wiener` request to our *common brother* `Repeater`!
+
 ### Step 4:
 You will see the JWT under the **Cookie** header. Double clicking on the header part will show the decoded format: id and algorithm (RS256).
 Change the RS256 to none and click on Apply changes. 
 <p align="center">
 <img width="60%" src="./Pasted image 20260128185806.png">
 </p>
+
 ### Step 5:
 Same goes for the payload part of JWT. Change the username wiener to administrator and apply changes.
 <p align="center">
 <img width="60%" src="./Pasted image 20260128191352.png">
 </p>
+
 ### Step 6:
 Remove the Signature part completely, leaving the last dot. With this change the path to /admin for accessing admin panel as demonstrated below:
 <p align="center">
