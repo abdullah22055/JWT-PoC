@@ -78,7 +78,8 @@ Same goes for the payload part of JWT. Change the username wiener to administrat
 
 ### Step 6:
 Remove the Signature part completely, leaving the last dot. With this change the path to /admin for accessing admin panel as demonstrated below:
-![[Pasted image 20260128200501.png]]
+![Admin Access After JWT Bypass](Pasted image 20260128200501.png)
+
 ### Step 7:
 In the response, you will see we have accessed the admin panel.
 ![[Pasted image 20260128200810.png]] 
