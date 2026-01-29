@@ -76,7 +76,7 @@ Note that when you login, requests in http history containing JWT will be highli
 <p align="center">
 <img width="60%" src="./Pasted image 20260128185409.png">
 </p>
- Send the `GET /my-account?id=wiener` request to our *common brother* `Repeater`!
+ Send the GET /my-account?id=wiener request to our common friend Repeater!
 
 ### Step 4:
 You will see the JWT under the **Cookie** header. Double clicking on the header part will show the decoded format: id and algorithm (RS256).
