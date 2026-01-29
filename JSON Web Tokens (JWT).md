@@ -105,7 +105,7 @@ In the response, you will see we have accessed the admin panel.
 Change the path to `/admin/delete?username=carlos` and you will see we have successfully deleted user Carlos.
 
 ### How to Secure it (Developer's Perspective):
-- Never let user-input decide the behavior security mechanisms.
+- Never let user-input decide the behavior of security mechanisms.
 - Treat whole JWT as untrusted, therefore validating all entries.
 - The wrong coding practice:
    `jwt.verify(token, key)`
