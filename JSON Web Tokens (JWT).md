@@ -53,7 +53,7 @@ As a pentester, my main focus typically revolves around understanding the behavi
 #### Cause:
  The None Algorithm Vulnerability typically refers to the setting the algorithm value (in the header) to `none`. This happens when server sets an algorithm value (HS256, RS256, etc.)in the header section of  JWT but fails at the verification part. Simply put, server is not enforcing a fixed, expected algorithm on the server side and blindly trusting user-controlled input.
   An attacker might intercept the token and set the value to none and as a result, the server validates without verifying the token's integrity. This may sound confusing but follow the PoC below. It will definitely help!
-#### Relevance of in Modern Pentesting:
+#### Relevance in Modern Pentesting:
 In modern pentesting, none algorithm is not that prevalent in well-developed applications yet it still exists in custom web apps. The reason for the PoC is to understand JWT internals and how the JWT verification logic works during penetration tests. 
 
 # PoC: JWT authentication bypass via flawed signature verification (Portswigger)
